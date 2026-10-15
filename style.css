@@ -7,7 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+    background: #f0f4f8;
+    color: #333;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,83 +17,112 @@ body {
 }
 
 .container {
-    background-color: white;
     width: 100%;
-    max-width: 420px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
 }
 
-h1 {
-    color: #263b59;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.container > p {
-    color: #666;
+header {
     text-align: center;
     margin-bottom: 25px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+header h1 {
+    color: #2457a7;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-label {
-    color: #333;
-    font-weight: bold;
+header p {
+    color: #666;
+    line-height: 1.5;
 }
 
-input {
-    padding: 12px;
+.calculadora {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012;
+}
+
+.calculadora h2 {
+    margin-bottom: 25px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+
+
+.campo input {
+    width: 100%;
+    padding: 13px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px;
-    margin-bottom: 8px;
 }
 
-input:focus {
-    outline: 2px solid #5878b8;
-    border-color: #5878b8;
+.campo input:focus {
+    outline: 2px solid #2457a7;
 }
 
 button {
-    background-color: #263b59;
-    color: white;
+    width: 100%;
     padding: 14px;
+    background: #2457a7;
+    color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 8px;
 }
 
 button:hover {
-    background-color: #3d5b85;
+    background: #19417f;
 }
 
-#resultado {
-    background-color: #f0f5ff;
-    border-radius: 8px;
-    padding: 18px;
+.resultado {
     margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
 }
 
-#resultado p {
-    margin-bottom: 12px;
-    color: #333;
+.resultado p {
+    margin: 12px 0 5px;
+    color: #555;
 }
 
-#resultado p:last-child {
-    margin-bottom: 0;
+.resultado strong {
+    display: block;
+    color: #16834a;
+    font-size: 20px;
+    overflow-wrap: anywhere;
 }
 
-#totalFinal {
-    color: #176b3a;
-    font-size: 18px;
+#mensagem {
+    margin-top: 15px;
+    color: #2457a7;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .calculadora {
+        padding: 22px;
+    }
 }

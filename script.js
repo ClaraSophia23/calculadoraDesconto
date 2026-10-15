@@ -6,7 +6,7 @@ function calcularDesconto() {
     var desconto = 0
     var tDesconto = total
 
-    if (total < 100) {
+    if (total <= 50) {
         desconto = 0
         tDesconto = total
     }
@@ -14,16 +14,15 @@ function calcularDesconto() {
         desconto = total * 0.10
         tDesconto = total - desconto
     }
-
     else {
         desconto = total * 0.05
         tDesconto = total - desconto
     }
 
-    document.getElementById("valorDesconto").innerHTML = desconto
-    document.getElementById("totalDesconto").innerHTML = tDesconto
+    document.getElementById("valorDesconto").innerHTML = desconto.toFixed(2)
+    document.getElementById("totalDesconto").innerHTML = tDesconto.toFixed(2)
 
-    console.log("Valor do desconto: " + desconto)
-    console.log("Total com desconto: " + tDesconto)
+    console.log("Valor do desconto: " + desconto.toFixed(2))
+    console.log("Total com desconto: " + tDesconto.toFixed(2))
 
 }
